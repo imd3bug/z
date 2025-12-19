@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9SC83J1GEE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-9SC83J1GEE");
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🎄 Holiday Zelle Reward - $750 Gift</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f0ebf8 0%, #e8dff5 50%, #f0ebf8 100%);
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+        color: #2d3748;
+        padding: 20px;
+      }
+
+      /* Snowflakes */
+      .snowflake {
+        position: fixed;
+        top: -10px;
+        z-index: 1;
+        user-select: none;
+        cursor: default;
+        animation: fall linear infinite;
+        color: #fff;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        font-size: 1.2em;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+
+      .page-wrapper {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        min-height: calc(100vh - 40px);
+      }
+
+      /* Main Content Card */
+      .main-card {
+        background: white;
+        border-radius: 28px;
+        padding: 32px 24px;
+        box-shadow: 0 20px 60px rgba(108, 43, 217, 0.15), 0 4px 12px rgba(108, 43, 217, 0.08);
+        position: relative;
+        z-index: 2;
+        border: 2px solid #e9d5ff;
+      }
+
+      /* Christmas Decorations */
+      .decoration {
+        position: absolute;
+        font-size: 2.5rem;
+        z-index: 3;
+        animation: swing 3s ease-in-out infinite;
+      }
+
+      .decoration.left {
+        top: -15px;
+        left: 20px;
+      }
+
+      .decoration.right {
+        top: -15px;
+        right: 20px;
+      }
+
+      @keyframes swing {
+        0%, 100% { transform: rotate(-5deg); }
+        50% { transform: rotate(5deg); }
+      }
+
+      /* Header Section */
+      .header-section {
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 2px dashed #e9d5ff;
+        position: relative;
+      }
+
+      .zelle-logo-container {
+        display: inline-block;
+        margin-bottom: 12px;
+      }
+
+      .zelle-logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(108, 43, 217, 0.25);
+        animation: logoFloat 3s ease-in-out infinite;
+      }
+
+      @keyframes logoFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      .headline {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: #1a202c;
+        margin-bottom: 8px;
+        line-height: 1.2;
+      }
+
+      .headline .highlight {
+        color: #6c2bd9;
+        background: linear-gradient(135deg, #6c2bd9, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .subheadline {
+        font-size: 0.95rem;
+        color: #718096;
+        margin-bottom: 12px;
+      }
+
+      .verified-badge {
+        display: inline-block;
+        margin-top: 8px;
+      }
+
+      .verified-badge img {
+        height: 24px;
+        width: auto;
+        vertical-align: middle;
+      }
+
+      /* Gift Box Amount */
+      .gift-section {
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px;
+        background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+        border-radius: 16px;
+        border: 2px solid #e9d5ff;
+        position: relative;
+      }
+
+      .gift-emoji {
+        font-size: 2rem;
+        display: inline-block;
+        margin-right: 8px;
+        animation: rotate3d 4s ease-in-out infinite;
+      }
+
+      @keyframes rotate3d {
+        0%, 100% { transform: rotateY(0deg); }
+        50% { transform: rotateY(180deg); }
+      }
+
+      .amount {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #6c2bd9;
+        text-shadow: 1px 1px 0 #e9d5ff;
+        display: inline-block;
+        position: relative;
+      }
+
+      .amount-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #4a5568;
+        margin-top: 4px;
+      }
+
+      .zelle-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: linear-gradient(135deg, #6c2bd9, #8b5cf6);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(108, 43, 217, 0.3);
+      }
+
+      /* Steps Section */
+      .steps-section {
+        margin: 20px 0;
+      }
+
+      .steps-title {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 12px;
+      }
+
+      .step-item {
+        background: #faf5ff;
+        border: 2px solid #e9d5ff;
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .step-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(108, 43, 217, 0.15);
+        border-color: #c4b5fd;
+        background: #fff;
+      }
+
+      .step-number {
+        background: linear-gradient(135deg, #6c2bd9, #8b5cf6);
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 800;
+        flex-shrink: 0;
+        box-shadow: 0 2px 8px rgba(108, 43, 217, 0.3);
+      }
+
+      .step-content {
+        flex: 1;
+      }
+
+      .step-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 2px;
+      }
+
+      .step-description {
+        font-size: 0.8rem;
+        color: #718096;
+      }
+
+      /* CTA Button */
+      .cta-section {
+        margin: 20px 0 12px 0;
+      }
+
+      .cta-button {
+        width: 100%;
+        padding: 20px 24px;
+        background: linear-gradient(135deg, #6c2bd9 0%, #8b5cf6 100%);
+        color: white;
+        border: none;
+        border-radius: 16px;
+        font-size: 1.25rem;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(108, 43, 217, 0.5);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+
+      .cta-button:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 12px 40px rgba(108, 43, 217, 0.6);
+      }
+
+      .cta-button:active {
+        transform: translateY(-1px) scale(1);
+      }
+
+      .cta-button span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-subtext {
+        text-align: center;
+        font-size: 0.75rem;
+        color: #a0aec0;
+        margin-top: 8px;
+      }
+
+      /* Social Proof */
+      .social-proof {
+        background: #faf5ff;
+        border-radius: 12px;
+        padding: 12px 16px;
+        margin-top: 12px;
+        border: 2px solid #e9d5ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .proof-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: #4a5568;
+      }
+
+      .proof-icon {
+        font-size: 1.2rem;
+      }
+
+      .proof-text strong {
+        color: #6c2bd9;
+        font-weight: 700;
+      }
+
+      /* Footer Section */
+      .footer-section {
+        background: white;
+        border-radius: 28px;
+        padding: 24px;
+        box-shadow: 0 10px 40px rgba(108, 43, 217, 0.1);
+        text-align: center;
+        border: 2px solid #e9d5ff;
+        margin-top: auto;
+      }
+
+      .trust-rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .trust-rating-badge {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #2d3748;
+      }
+
+      .stars {
+        color: #6c2bd9;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+      }
+
+      .trustpilot-text {
+        font-size: 0.85rem;
+        color: #718096;
+        margin-bottom: 16px;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding-top: 16px;
+        border-top: 1px solid #e9d5ff;
+      }
+
+      .footer-link {
+        color: #718096;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: color 0.2s ease;
+      }
+
+      .footer-link:hover {
+        color: #6c2bd9;
+      }
+
+      /* Notifications */
+      .notification {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-120%);
+        background: white;
+        padding: 16px 20px;
+        border-radius: 16px;
+        box-shadow: 0 12px 40px rgba(108, 43, 217, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.9rem;
+        color: #2d3748;
+        z-index: 1000;
+        border: 2px solid #e9d5ff;
+        max-width: 340px;
+        width: calc(100% - 40px);
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+
+      .notification.show {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .notification-icon {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .notification-content {
+        flex: 1;
+      }
+
+      .notification-title {
+        font-weight: 700;
+        margin-bottom: 2px;
+        color: #1a202c;
+      }
+
+      .notification-text {
+        color: #718096;
+        font-size: 0.85rem;
+      }
+
+      .notification .highlight {
+        color: #6c2bd9;
+        font-weight: 700;
+      }
+
+      /* Responsive */
+      @media (max-width: 480px) {
+        .main-card {
+          padding: 24px 20px;
+        }
+
+        .headline {
+          font-size: 1.5rem;
+        }
+
+        .amount {
+          font-size: 2.5rem;
+        }
+
+        .decoration {
+          font-size: 2rem;
+        }
+      }
+
+      /* Pulse Animation */
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      /* Popup Notification */
+      .popup-notification {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        border-radius: 16px;
+        padding: 16px 20px;
+        box-shadow: 0 12px 40px rgba(108, 43, 217, 0.3);
+        border: 2px solid #e9d5ff;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 320px;
+        z-index: 999;
+        transform: translateX(400px);
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+
+      .popup-notification.show {
+        transform: translateX(0);
+      }
+
+      .popup-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #6c2bd9, #8b5cf6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 12px rgba(108, 43, 217, 0.3);
+      }
+
+      .popup-content {
+        flex: 1;
+      }
+
+      .popup-name {
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 2px;
+        font-size: 0.95rem;
+      }
+
+      .popup-action {
+        color: #6c2bd9;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .popup-time {
+        color: #a0aec0;
+        font-size: 0.75rem;
+        margin-top: 4px;
+      }
+
+      .popup-close {
+        background: transparent;
+        border: none;
+        color: #a0aec0;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+        flex-shrink: 0;
+      }
+
+      .popup-close:hover {
+        color: #6c2bd9;
+      }
+
+      @media (max-width: 480px) {
+        .popup-notification {
+          right: 10px;
+          left: 10px;
+          max-width: calc(100% - 20px);
+          bottom: 10px;
+        }
+
+        .popup-notification.show {
+          transform: translateX(0);
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "tw9e72l0dn");
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TC2XWSJD"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+
+    <div class="page-wrapper">
+      <!-- Main Content Card -->
+      <div class="main-card">
+        <!-- Christmas Decorations -->
+        <div class="decoration left">🎄</div>
+        <div class="decoration right">🎄</div>
+
+        <!-- Header -->
+        <div class="header-section">
+          <div class="zelle-logo-container">
+            <img src="/mnt/user-data/uploads/Zelle_-_FinTech_News.png" alt="Zelle" class="zelle-logo" />
+          </div>
+          <h1 class="headline">
+            Your <span class="highlight">Holiday Gift</span> is Ready!
+          </h1>
+          <p class="subheadline">Get your Zelle cash reward this holiday season</p>
+          <div class="verified-badge">
+            <img src="/mnt/user-data/uploads/verifiedbytt.png" alt="Verified by TikTok" />
+          </div>
+        </div>
+
+        <!-- Gift Amount -->
+        <div class="gift-section">
+          <span class="gift-emoji">🎁</span>
+          <div id="amount" class="amount pulse">$750</div>
+          <div class="amount-label">Cash Reward</div>
+          <div class="zelle-badge">
+            <span>⚡</span>
+            <span>Direct to Zelle</span>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+          <button id="claimButton" class="cta-button">
+            <span>🎄 Claim My $750 Zelle Gift →</span>
+          </button>
+          <div class="cta-subtext">✨ Free to join • No hidden fees</div>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps-section">
+          <div class="steps-title">How It Works</div>
+
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <div class="step-title">Click Above to Start</div>
+              <div class="step-description">Takes just 30 seconds</div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <div class="step-title">Enter Your Information</div>
+              <div class="step-description">Quick registration</div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <div class="step-title">Complete 3-5 Partner Offers</div>
+              <div class="step-description">Choose from trusted brands</div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <div class="step-title">Receive Your Zelle Reward</div>
+              <div class="step-description">Instant transfer!</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Proof -->
+        <div class="social-proof">
+          <div class="proof-item">
+            <span class="proof-icon">🎉</span>
+            <div class="proof-text">
+              <strong>2,847</strong> claimed today
+            </div>
+          </div>
+          <div class="proof-item">
+            <span class="proof-icon">⚡</span>
+            <div class="proof-text">
+              <strong>15 min</strong> avg time
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="footer-section">
+        <div class="trust-rating">
+          <span class="trust-rating-badge">Excellent</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="trustpilot-text">
+          Rated 4.8/5 based on 12,847 reviews on Trustpilot
+        </div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Contact Support</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Names for notifications
+      const NAMES = [
+        "Sarah M.", "Michael T.", "Jessica R.", "David W.", "Emma K.",
+        "James P.", "Olivia S.", "Daniel L.", "Sophia G.", "Matthew B.",
+        "Isabella D.", "Joshua W.", "Ava R.", "Christopher H.", "Mia F.",
+        "Andrew M.", "Emily D.", "Ryan K.", "Madison P.", "Brandon S.",
+        "Hannah L.", "Tyler G.", "Ashley T.", "Kevin M.", "Samantha R."
+      ];
+
+      // Currency mapping
+      const currencyMap = {
+        US: "$", CA: "CA$", GB: "£", AU: "A$", DE: "€", FR: "€",
+        IT: "€", ES: "€", NL: "€", SE: "kr", NO: "kr", DK: "kr",
+        FI: "€", CH: "CHF", AT: "€", BE: "€", IE: "€", PT: "€",
+        JP: "¥", KR: "₩", CN: "¥", IN: "₹", BR: "R$", MX: "$",
+        NZ: "NZ$", SG: "S$", HK: "HK$", TW: "NT$"
+      };
+
+      let currentCurrency = "$";
+
+      // Update currency
+      function updateCurrency(countryCode) {
+        currentCurrency = currencyMap[countryCode] || "$";
+        const amountEl = document.getElementById("amount");
+        if (amountEl) {
+          amountEl.textContent = `${currentCurrency}750`;
+        }
+        const button = document.getElementById("claimButton");
+        if (button) {
+          button.innerHTML = `<span>🎄 Claim My ${currentCurrency}750 Zelle Gift →</span>`;
+        }
+      }
+
+      // Geo detection
+      function detectLocation() {
+        fetch("https://ipinfo.io/json?token=f1fb8d3a1d0b74")
+          .then(res => res.json())
+          .then(data => {
+            if (data.country) {
+              updateCurrency(data.country);
+            }
+          })
+          .catch(() => {
+            updateCurrency("US");
+          });
+      }
+
+      // Create snowflakes
+      function createSnowflakes() {
+        const snowflakes = ['❄', '❅', '❆'];
+        for (let i = 0; i < 10; i++) {
+          const snowflake = document.createElement('div');
+          snowflake.className = 'snowflake';
+          snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+          snowflake.style.left = Math.random() * 100 + '%';
+          snowflake.style.animationDuration = (Math.random() * 3 + 5) + 's';
+          snowflake.style.animationDelay = Math.random() * 5 + 's';
+          snowflake.style.opacity = Math.random() * 0.4 + 0.2;
+          document.body.appendChild(snowflake);
+        }
+      }
+
+      // Create notification
+      function createNotification() {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+
+        const templates = [
+          {
+            icon: '🎉',
+            title: 'Just Claimed!',
+            text: `<span class="highlight">${NAMES[Math.floor(Math.random() * NAMES.length)]}</span> just received ${currentCurrency}750 via Zelle`
+          },
+          {
+            icon: '⚡',
+            title: 'Active Now',
+            text: `<span class="highlight">${Math.floor(Math.random() * 20 + 10)} people</span> are claiming right now`
+          },
+          {
+            icon: '🎯',
+            title: 'Almost There!',
+            text: `Only <span class="highlight">${Math.floor(Math.random() * 10 + 3)} spots</span> left today`
+          },
+          {
+            icon: '🌟',
+            title: 'Trending',
+            text: `<span class="highlight">${Math.floor(Math.random() * 50 + 30)} claims</span> in your area today`
+          },
+          {
+            icon: '💜',
+            title: 'Instant Transfer',
+            text: `<span class="highlight">Direct to Zelle</span> - Get money in minutes`
+          }
+        ];
+
+        const template = templates[Math.floor(Math.random() * templates.length)];
+        
+        notification.innerHTML = `
+          <span class="notification-icon">${template.icon}</span>
+          <div class="notification-content">
+            <div class="notification-title">${template.title}</div>
+            <div class="notification-text">${template.text}</div>
+          </div>
+        `;
+
+        document.body.appendChild(notification);
+
+        setTimeout(() => notification.classList.add('show'), 100);
+        setTimeout(() => {
+          notification.classList.remove('show');
+          setTimeout(() => notification.remove(), 400);
+        }, 5000);
+      }
+
+      // Start notifications
+      function startNotifications() {
+        setTimeout(() => {
+          createNotification();
+          setInterval(createNotification, Math.random() * 8000 + 15000);
+        }, 5000);
+      }
+
+      // Counter animation
+      function animateCounter() {
+        const el = document.getElementById('amount');
+        let count = 0;
+        const target = 750;
+        const duration = 2000;
+        const increment = target / (duration / 16);
+
+        const timer = setInterval(() => {
+          count += increment;
+          if (count >= target) {
+            count = target;
+            clearInterval(timer);
+          }
+          el.textContent = `${currentCurrency}${Math.floor(count)}`;
+        }, 16);
+      }
+
+      // Create popup notification for claims
+      function createPopupNotification() {
+        // Remove any existing popup
+        const existingPopup = document.querySelector('.popup-notification');
+        if (existingPopup) {
+          existingPopup.remove();
+        }
+
+        const popup = document.createElement('div');
+        popup.className = 'popup-notification';
+
+        const randomName = NAMES[Math.floor(Math.random() * NAMES.length)];
+        const locations = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'Austin', 'Seattle', 'Denver', 'Boston', 'Miami', 'Atlanta'];
+        const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+        const timeAgo = ['Just now', '1 min ago', '2 mins ago', '3 mins ago'];
+        const randomTime = timeAgo[Math.floor(Math.random() * timeAgo.length)];
+
+        const avatarEmojis = ['👨', '👩', '🧑', '👱‍♀️', '👱‍♂️', '🧔', '👴', '👵'];
+        const randomAvatar = avatarEmojis[Math.floor(Math.random() * avatarEmojis.length)];
+
+        popup.innerHTML = `
+          <div class="popup-avatar">${randomAvatar}</div>
+          <div class="popup-content">
+            <div class="popup-name">${randomName}</div>
+            <div class="popup-action">Just claimed ${currentCurrency}750 from ${randomLocation}!</div>
+            <div class="popup-time">${randomTime}</div>
+          </div>
+          <button class="popup-close">×</button>
+        `;
+
+        document.body.appendChild(popup);
+
+        // Add close functionality
+        popup.querySelector('.popup-close').addEventListener('click', function() {
+          popup.classList.remove('show');
+          setTimeout(() => popup.remove(), 400);
+        });
+
+        // Show popup
+        setTimeout(() => popup.classList.add('show'), 100);
+
+        // Auto hide after 6 seconds
+        setTimeout(() => {
+          popup.classList.remove('show');
+          setTimeout(() => popup.remove(), 400);
+        }, 6000);
+      }
+
+      // Start popup notifications
+      function startPopupNotifications() {
+        setTimeout(() => {
+          createPopupNotification();
+          setInterval(createPopupNotification, Math.random() * 10000 + 15000);
+        }, 8000);
+      }
+
+      // Button click
+      document.getElementById('claimButton').addEventListener('click', function() {
+        window.open('https://get.yourdealfinds.com/click', '_blank', 'noreferrer');
+      });
+
+      // Initialize
+      window.addEventListener('load', function() {
+        createSnowflakes();
+        detectLocation();
+        setTimeout(animateCounter, 500);
+        startNotifications();
+        startPopupNotifications();
+      });
+    </script>
+  </body>
+</html>
